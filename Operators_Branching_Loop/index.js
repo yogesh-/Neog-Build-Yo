@@ -70,6 +70,7 @@
 
 // 6 Write program to take a month as an input from the user and find out whether the month has 31 days or not.
 
+var readline = require("readline-sync");
 var month = {
     Jan:30,
     Feb:28,
@@ -85,7 +86,10 @@ var month = {
     Dec:31 
 }
 
-const userinp = prompt("Enter the month");
+// const userinp = prompt("Enter the month");
+
+const userinp = readline.question("Enter the month");
+
 for(var i=0;i<Object.keys(month).length;i++){
     if (userinp == Object.keys(month)[i]){
         console.log(`${userinp} has ${Object.values(month)[i]} days`);
